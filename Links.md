@@ -19,5 +19,8 @@
 - https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdeveloper.download.nvidia.com%2Fembedded%2Fjetson%2FJetson_OTA2024Audio.pptx&wdOrigin=BROWSELINK  
 
 
-## 
+## Nvidia GitHub
+- https://github.com/NVIDIA 
+
+
 
