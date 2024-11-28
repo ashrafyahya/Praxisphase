@@ -22,3 +22,26 @@ sudo apt update
 sudo apt install code # or code-insiders
 Quelle:  https://code.visualstudio.com/docs/setup/linux
 
+
+lsblk
+sudo umount /dev/sdX1
+sudo dd if=/path/to/image.img of=/dev/sdX bs=4M status=progress
+sudo mount /dev/sdX1 /mnt
+
+
+sudo mkfs.ext4 /dev/mmcblk0p1  # Löschen Für ext4-Format
+
+sudo apt install unzip
+unzip ~/Downloads/jetson_orin_nano_image.zip -d ~/Downloads
+
+
+sudo apt update
+sudo apt install gparted
+sudo gparted
+
+
+hostnamectl
+
+
+sudo usermod -aG sudo ashraf
+sudo usermod -aG wheel ashraf
