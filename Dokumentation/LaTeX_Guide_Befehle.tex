@@ -1,0 +1,155 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\geometry{a4paper, margin=1in}
+
+\title{LaTeX Grundlagen und Wichtige Befehle}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Grundlagen}
+\subsection{Dokumentstruktur}
+\begin{verbatim}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\begin{document}
+% Hier beginnt der Inhalt
+\end{document}
+\end{verbatim}
+
+\subsection{Zeilenumbruch und Absatz}
+\begin{verbatim}
+Zeilenumbruch erzwingen: \\
+
+Absatz: Eine Leerzeile im Code einfügen.
+\end{verbatim}
+
+\section{Textformatierung}
+\subsection{Fett, Kursiv und Unterstreichen}
+\begin{verbatim}
+\textbf{Fetter Text}
+\textit{Kursiver Text}
+\underline{Unterstrichener Text}
+\end{verbatim}
+
+\subsection{Schriftgröße}
+\begin{verbatim}
+{\small Kleiner Text} \\
+{\Large Großer Text} \\
+{\huge Sehr großer Text}
+\end{verbatim}
+
+\subsection{Hoch- und Tiefstellen}
+\begin{verbatim}
+E = mc^2   % Hochstellen mit ^
+H_2O       % Tiefstellen mit _
+\end{verbatim}
+
+\section{Listen}
+\subsection{Nummerierte Liste}
+\begin{verbatim}
+\begin{enumerate}
+    \item Erster Punkt
+    \item Zweiter Punkt
+\end{enumerate}
+\end{verbatim}
+
+\subsection{Aufzählung (Bullet Points)}
+\begin{verbatim}
+\begin{itemize}
+    \item Erster Punkt
+    \item Zweiter Punkt
+\end{itemize}
+\end{verbatim}
+
+\section{Tabellen}
+\subsection{Einfache Tabelle}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|}
+\hline
+Spalte 1 & Spalte 2 & Spalte 3 \\
+\hline
+Eintrag 1 & Eintrag 2 & Eintrag 3 \\
+\hline
+\end{tabular}
+\end{verbatim}
+
+\section{Bilder Einfügen}
+\begin{verbatim}
+\usepackage{graphicx} % im Präambel hinzufügen
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bildname.jpg}
+    \caption{Beschreibung des Bildes}
+    \label{fig:bildlabel}
+\end{figure}
+\end{verbatim}
+
+\section{Links Einfügen}
+\subsection{Externer Link}
+\begin{verbatim}
+\href{https://www.example.com}{Linktext}
+\end{verbatim}
+
+\subsection{Interner Link}
+\begin{verbatim}
+\label{sec:meinAbschnitt}
+\ref{sec:meinAbschnitt}
+\end{verbatim}
+
+\section{Fußnoten}
+\begin{verbatim}
+Hier ist ein Text mit einer Fußnote.\footnote{Das ist eine Fußnote.}
+\end{verbatim}
+
+\section{Mathematik}
+\subsection{Inline-Mathematik}
+\begin{verbatim}
+$E = mc^2$
+\end{verbatim}
+
+\subsection{Gleichung in eigener Zeile}
+\begin{verbatim}
+\begin{equation}
+    E = mc^2
+\end{equation}
+\end{verbatim}
+
+\section{Zitate und Literaturverzeichnis}
+\begin{verbatim}
+\begin{thebibliography}{9}
+\bibitem{latex} Lamport, Leslie.
+\textit{LaTeX: A Document Preparation System}. Addison-Wesley, 1986.
+\end{thebibliography}
+\end{verbatim}
+
+\section{Code Einfügen}
+\begin{verbatim}
+\usepackage{listings}
+\begin{lstlisting}
+#include <iostream>
+int main() {
+    std::cout << "Hello, world!";
+    return 0;
+}
+\end{lstlisting}
+\end{verbatim}
+
+\newpage
+Seitenumbruch erzwingen:
+
+\clearpage
+Eine neue Seite beginnen:
+
+
+\end{document}

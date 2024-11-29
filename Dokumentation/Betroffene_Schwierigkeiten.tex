@@ -1,0 +1,55 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{a4paper, margin=1in}
+
+\title{Einrichtungserrors}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Genutzte Hardware für Image-Flashen}
+
+Folgende Software wurde auf zwei Laptops ausgeführt. Der eine ist ein Hochschul-Laptop, den ich für das C++-Tutorium nutze. Der andere ist mein persönlicher Laptop.
+
+\subsection{Hochschul-Laptop}
+\begin{itemize}
+    \item \textbf{Betriebssystem}: Windows 10
+    \item \textbf{Speicher}: 237GB
+    \item \textbf{RAM}: 8GB
+    \item \textbf{Weiteres}: Core i3, 2 Kerne, 4 logische Prozessoren
+\end{itemize}
+
+\subsection{Persönlicher Laptop}
+\begin{itemize}
+    \item \textbf{Betriebssystem}: Windows 10
+    \item \textbf{Speicher}: 222GB SSD + 1TB DDR
+    \item \textbf{RAM}: 16GB
+    \item \textbf{Weiteres}: Core i5, 4 Kerne, 8 logische Prozessoren
+\end{itemize}
+
+\newpage
+\section{Errors-Liste und mögliche Lösungen und Empfehlungen}
+\begin{itemize}
+    \item \textbf{SD Card Formatter}: \\Funktioniert nur auf dem persönlichen PC. Auf dem Hochschul-Laptop wird die SD-Karte nicht erkannt.
+    \item \textbf{Etcher}: \\Hängt auf dem Hochschul-Laptop. Auf meinem persönlichen PC führt es beim Flashen zum Blue Screen.
+    \item \textbf{Rufus}: \\Funktioniert meist, aber manchmal gibt es Blue Screens beim Formatieren der SD-Karte.
+    \item \textbf{Win32 Disk Manager}: \\Erkennt auf meinem PC die SD-Karte nicht. Auf dem Hochschul-Laptop wird die Karte erkannt, aber der Flash-Prozess startet nicht.
+    \item \textbf{Flash-Prozess}: \\Funktioniert bei Rufus meist, einmal auch bei Etcher. Das Image wird jedoch nicht korrekt geflasht, und das System bootet nicht korrekt.
+    \item \textbf{System bootet nicht}: \\Problem tritt auf, da das System JetPack 6.1 nicht unterstützt.
+    \item \textbf{SDK Manager}: \\Empfehlung, auf Linux zu arbeiten. Installationsanleitung: VirtualBox, Ubuntu, 35GB Mindestspeicher.
+    \item \textbf{Speicherprobleme in VirtualBox}: \\Speicher außerhalb der virtuellen Maschine vergrößern.
+    \item \textbf{Partitionierung}: \\SDK Manager nutzt möglicherweise den falschn falschen Datenträger. Verwenden Sie GParted zur Größenanpassung.
+    \item \textbf{USB-Verbindung}: \\USB in VirtualBox unter \texttt{Settings} hinzufügen. Achten Sie darauf, dass der Name der NVIDIA-Hardware angezeigt wird.
+    \item \textbf{Recovery Mode}: \\Verbinden Sie die PINS \texttt{Ground} und \texttt{REC} mit Female-to-Female-Jumper-Kabeln.
+    \item \textbf{Gerät wird nicht erkannt}: \\Stromversorgung überprüfen und Gerät im Recovery Mode starten.
+    \item \textbf{Virtuelle Maschine friert ein}: \\Speicher erhöhen und virtuelle Maschine neu installieren.
+    \item \textbf{Schwarzer Bildschirm}: \\Verwenden Sie den Ubuntu-Befehl \texttt{dd}, um das Image auf die SD-Karte zu flashen.
+\end{itemize}
+
+\end{document}
