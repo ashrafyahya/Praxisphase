@@ -1,0 +1,54 @@
+Software-Abhängigkeiten installieren
+Jetson-Inferenz-Toolkit: NVIDIA bietet das Jetson Inference-Projekt, das vortrainierte Modelle und Beispielanwendungen für Objekterkennung, Klassifikation und Segmentierung enthält.
+
+git clone --recursive https://github.com/dusty-nv/jetson-inference
+if not working:
+git clone --recursive --depth 1 https://github.com/dusty-nv/jetson-inference
+Wechsle ins Verzeichnis
+cd jetson-inference
+Statusüberprüfung mit Git
+
+Prüfe, ob es sich um ein gültiges Git-Repository handelt:
+git status
+
+
+
+cd jetson-inference
+mkdir build
+cd build
+cmake ../
+make -j$(nproc)
+sudo make install
+
+
+Python-Bibliotheken: Je nach Projekt kannst du benötigte Python-Bibliotheken installieren. Dazu gehören:
+
+sudo apt-get update
+sudo apt-get install python3-pip
+pip3 install numpy opencv-python matplotlib
+pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu118
+
+YOLOv5/YOLONano verwenden:
+Lade YOLOv5 herunter und installiere die Abhängigkeiten:
+
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip3 install -r requirements.txt
+python3 detect.py --source 0  # Für Kamera-Input
+
+falls Fehler: ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+NUtze: pip3 install --upgrade --force-reinstall -r requirements.txt
+
+
+
+Kamera-Setup und Videoaufnahm:
+Stelle sicher, dass deine Kamera funktioniert:
+gst-launch-1.0 nvarguscamerasrc ! nvoverlaysink
+
+Für USB-Kameras:
+python3 detectnet-camera.py
+
+5. Optimierung mit TensorRT:
+Beschleunige dein Modell mit TensorRT für geringere Latenz:
+sudo apt-get install tensorrt
+python3 trt_infer.py --engine model.trt
