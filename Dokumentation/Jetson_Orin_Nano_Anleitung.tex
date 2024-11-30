@@ -1,0 +1,131 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{longtable}
+\geometry{a4paper, margin=1in}
+
+\title{Anweisungen für das Jetson Orin Nano Developer Kit}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Image auf die microSD-Karte schreiben}
+
+Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Karte mit dem richtigen Image vorbereiten. Folgen Sie diesen Schritten:
+
+\subsection{1. Das Jetson Orin Nano Developer Kit-Image herunterladen}
+\begin{itemize}
+    \item Besuchen Sie das \href{https://developer.nvidia.com/embedded/downloads}{Jetson Download Center} und laden Sie das neueste SD-Karten-Image herunter.
+    \item Die heruntergeladene Datei liegt normalerweise im \texttt{.zip}-Format vor. Entpacken Sie die Datei, um die \texttt{.img}-Datei zu erhalten.
+\end{itemize}
+
+\subsection{2. microSD-Karte in den Host-Computer einlegen}
+\begin{itemize}
+    \item Verwenden Sie einen microSD-Kartenleser, um die Karte in Ihren Computer einzulegen.
+    \item Stellen Sie sicher, dass die microSD-Karte von Ihrem Betriebssystem erkannt wird.
+\end{itemize}
+
+\subsection{3. Image auf die microSD-Karte schreiben}
+\begin{itemize}
+    \item Nutzen Sie ein Tool wie Balena Etcher, das für Windows, Mac und Linux verfügbar ist.
+\end{itemize}
+
+\textbf{Schritte mit Balena Etcher:}
+\begin{enumerate}
+    \item Installieren und öffnen Sie Balena Etcher.
+    \item Wählen Sie die entpackte \texttt{.img}-Datei aus.
+    \item Wählen Sie die microSD-Karte als Zielgerät aus.
+    \item Klicken Sie auf die Schaltfläche \textquotedblleft Flash\textquotedblright, um das Image auf die Karte zu schreiben.
+\end{enumerate}
+
+\subsection{4. Image überprüfen}
+\begin{itemize}
+    \item Balena Etcher überprüft automatisch die geschriebenen Daten.
+    \item Wenn die Überprüfung fehlschlägt, wiederholen Sie den Flash-Vorgang oder verwenden Sie eine andere microSD-Karte.
+\end{itemize}
+
+\subsection{5. microSD-Karte sicher entfernen}
+\begin{itemize}
+    \item Werfen Sie die microSD-Karte sicher aus, um Datenbeschädigungen zu vermeiden.
+\end{itemize}
+
+\section{Einrichtung und erster Start}
+
+\subsection{1. Verbindungen herstellen}
+\begin{itemize}
+    \item \textbf{microSD-Karte einlegen:} Setzen Sie die vorbereitete microSD-Karte ein.
+    \item \textbf{Peripheriegeräte anschließen:} USB-Tastatur, Maus und Monitor.
+    \item \textbf{Netzwerkverbindung herstellen:} Ethernet-Kabel anschließen.
+    \item \textbf{Stromversorgung anschließen:} 19V-Netzteil mit dem DC-Eingang verbinden.
+\end{itemize}
+
+\subsection{2. Erster Start}
+\begin{itemize}
+    \item Das Developer Kit startet automatisch. Die grüne LED leuchtet.
+    \item Folgen Sie den Anweisungen zur Einrichtung (EULA, Sprache, Zeitzone, WLAN, Benutzerkonto).
+\end{itemize}
+
+\subsection{3. Nach dem Login}
+\begin{verbatim}
+sudo apt update
+sudo apt upgrade
+\end{verbatim}
+
+\section{Nächste Schritte}
+\begin{itemize}
+    \item Verwenden Sie den Jetson SDK Manager, um zusätzliche NVIDIA-Softwarepakete zu installieren.
+    \item Besuchen Sie die NVIDIA Developer Website für Tutorials und Beispiele.
+\end{itemize}
+
+\section{Technische Spezifikationen}
+
+\subsection{Prozessor (CPU)}
+\begin{itemize}
+    \item \textbf{Architektur:} ARM Cortex-A78AE
+    \item \textbf{Kerne:} 6 Kerne, bis zu 1,5 GHz
+\end{itemize}
+
+\subsection{Grafikprozessor (GPU)}
+\begin{itemize}
+    \item \textbf{Architektur:} NVIDIA Ampere, 64 Tensor Cores, 40 TOPS
+\end{itemize}
+
+\subsection{Speicher (RAM)}
+\begin{itemize}
+    \item 4 GB oder 8 GB LPDDR5, bis zu 68 GB/s Bandbreite
+\end{itemize}
+
+\subsection{Schnittstellen und I/O}
+\begin{itemize}
+    \item PCIe Gen 3 x4, USB 3.2, Gigabit-Ethernet
+    \item HDMI 2.1, DP 1.2, 2x MIPI CSI-2 Kameraanschlüsse
+\end{itemize}
+
+\subsection{Leistung und Energieverbrauch}
+\begin{itemize}
+    \item Einstellbarer Energieverbrauch: 7 W bis 15 W
+\end{itemize}
+
+\subsection{Softwareunterstützung}
+\begin{itemize}
+    \item Linux for Tegra (L4T), Unterstützung für CUDA 11, C++, Python, TensorFlow, PyTorch
+\end{itemize}
+
+\section{Vergleich der Modelle}
+
+\begin{longtable}{|l|c|c|c|}
+    \hline
+    \textbf{Modell} & \textbf{RAM} & \textbf{Leistung (TOPS)} & \textbf{Energieverbrauch} \\
+    \hline
+    Jetson Orin Nano 4GB & 4 GB & 20 TOPS & 7–15 W \\
+    Jetson Orin Nano 8GB & 8 GB & 40 TOPS & 7–15 W \\
+    \hline
+\end{longtable}
+
+\end{document}
