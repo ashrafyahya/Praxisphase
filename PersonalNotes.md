@@ -42,6 +42,5 @@ sudo gparted
 
 hostnamectl
 
-
 sudo usermod -aG sudo ashraf
 sudo usermod -aG wheel ashraf
