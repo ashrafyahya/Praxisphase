@@ -1,21 +1,22 @@
-
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{xcolor} 
+\usepackage{graphicx}
 \geometry{a4paper, margin=1in}
 
 \title{Einrichtungserrors}
 \author{}
-\date{\today}
+\date{}
 
 \begin{document}
 
 \maketitle
-
+\noindent\textbf{Unten sind die Errors und Methoden sowie Bemerkungen und mögliche Lösungen, die ich bei der Einrichtung von Jetson Orin Nano 8GB bekommen bzw. umgestzt habe.}
 \section{Genutzte Hardware für Image-Flashen}
 
-Folgende Software wurde auf zwei Laptops ausgeführt. Der eine ist ein Hochschul-Laptop, den ich für das C++-Tutorium nutze. Der andere ist mein persönlicher Laptop.
+Folgende Software wurde auf zwei Laptops ausgeführt. Der eine ist ein Hochschul-Laptop. Der andere ist mein persönlicher Laptop. 
 
 \subsection{Hochschul-Laptop}
 \begin{itemize}
@@ -35,21 +36,59 @@ Folgende Software wurde auf zwei Laptops ausgeführt. Der eine ist ein Hochschul
 
 \newpage
 \section{Errors-Liste und mögliche Lösungen und Empfehlungen}
-\begin{itemize}
-    \item \textbf{SD Card Formatter}: \\Funktioniert nur auf dem persönlichen PC. Auf dem Hochschul-Laptop wird die SD-Karte nicht erkannt.
-    \item \textbf{Etcher}: \\Hängt auf dem Hochschul-Laptop. Auf meinem persönlichen PC führt es beim Flashen zum Blue Screen.
-    \item \textbf{Rufus}: \\Funktioniert meist, aber manchmal gibt es Blue Screens beim Formatieren der SD-Karte.
-    \item \textbf{Win32 Disk Manager}: \\Erkennt auf meinem PC die SD-Karte nicht. Auf dem Hochschul-Laptop wird die Karte erkannt, aber der Flash-Prozess startet nicht.
-    \item \textbf{Flash-Prozess}: \\Funktioniert bei Rufus meist, einmal auch bei Etcher. Das Image wird jedoch nicht korrekt geflasht, und das System bootet nicht korrekt.
-    \item \textbf{System bootet nicht}: \\Problem tritt auf, da das System JetPack 6.1 nicht unterstützt.
-    \item \textbf{SDK Manager}: \\Empfehlung, auf Linux zu arbeiten. Installationsanleitung: VirtualBox, Ubuntu, 35GB Mindestspeicher.
-    \item \textbf{Speicherprobleme in VirtualBox}: \\Speicher außerhalb der virtuellen Maschine vergrößern.
-    \item \textbf{Partitionierung}: \\SDK Manager nutzt möglicherweise den falschn falschen Datenträger. Verwenden Sie GParted zur Größenanpassung.
-    \item \textbf{USB-Verbindung}: \\USB in VirtualBox unter \texttt{Settings} hinzufügen. Achten Sie darauf, dass der Name der NVIDIA-Hardware angezeigt wird.
-    \item \textbf{Recovery Mode}: \\Verbinden Sie die PINS \texttt{Ground} und \texttt{REC} mit Female-to-Female-Jumper-Kabeln.
-    \item \textbf{Gerät wird nicht erkannt}: \\Stromversorgung überprüfen und Gerät im Recovery Mode starten.
-    \item \textbf{Virtuelle Maschine friert ein}: \\Speicher erhöhen und virtuelle Maschine neu installieren.
-    \item \textbf{Schwarzer Bildschirm}: \\Verwenden Sie den Ubuntu-Befehl \texttt{dd}, um das Image auf die SD-Karte zu flashen.
-\end{itemize}
+\begin{enumerate}
+
+    \item \textbf{SD Card Formatter:}\\
+    Falls die Anwendung nicht funktioniert, kann dies am Laptop liegen. Versuchen Sie die Anwendung auf einem anderen Laptop zu nutzen. Auf dem Hochschul-Laptop funktioniert sie nicht, auf meinem persönlichen Laptop jedoch schon.
+    \par \bigskip
+    \item \textbf{Etcher:}
+    \begin{itemize}
+        \item Falls der Flash-Prozess nicht startet, nutzen Sie einen Laptop mit besserem RAM und CPU. Auf dem Hochschul-Laptop hatte ich dieses Problem, auf meinem persönlichen Laptop nicht.
+        \item Falls Etcher zum Blue Screen führt, stellen Sie sicher, dass nur Etcher läuft.
+    \end{itemize}
+    \par \bigskip
+
+    \item \textbf{Rufus:}
+    \begin{itemize}
+        \item Falls Etcher nicht funktioniert, nutzen Sie Rufus zum Flashen des Images.
+        \item Falls Rufus zum Blue Screen führt, formatieren Sie zuerst die SD-Karte und verwenden Sie dann Rufus.
+    \end{itemize}
+    \par \bigskip
+
+    \item \textbf{Win32 Disk Manager:}\\
+    Falls die SD-Karte nicht erkannt wird, starten Sie den Laptop neu oder versuchen Sie es auf einem anderen Laptop. Auf dem Hochschul-Laptop hatte ich dieses Problem, auf meinem persönlichen Laptop jedoch nicht.
+    \par \bigskip
+
+    \item \textbf{Flash-Prozess:}\\
+    Wenn das Image erfolgreich geflasht wurde, aber das System nicht bootet und der Bildschirm schwarz bleibt, lesen Sie im \textcolor{blue}{\href{https://forums.developer.nvidia.com/t/jetson-orin-nano-boot-issue-blank-screen-after-nvidia-logo/309412}{Forum}}.
+    \par \bigskip
+
+    \item \textbf{DD-Methode:}\\
+    Falls der Flash-Prozess weiterhin fehlschlägt, nutzen Sie die DD-Methode unter Ubuntu mit VirtualBox.
+    \par \bigskip
+
+    \item \textbf{Speicherplatz-Mängel:}
+    Um den Speicher der virtuellen Maschine zu vergrößern, gehen Sie in VirtualBox zu "Virtuelle Medien". Sehen Sie das Bild:
+    \par \bigskip
+
+    \includegraphics[width=0.8\textwidth]{Errors_Images/VirtuelleMedien.png}
+
+    Nutzen Sie GParted unter Ubuntu, um die Partition zu erweitern. Wählen Sie die Partition, die der SDK Manager verwendet, und klicken Sie auf "resize/move".
+    \par \bigskip
+
+    \item \textbf{SDK Manager:}
+    \begin{itemize}
+        \item Stellen Sie sicher, dass die Hardware im Recovery-Mode ist, indem Sie die Pins \texttt{GROUND} und \texttt{REC} verbinden.
+        \item Fügen Sie die USB-3-Schnittstelle in VirtualBox hinzu. Sehen Sie das folgende Bild: 
+        \par \bigskip
+        \includegraphics[width=0.8\textwidth]{Errors_Images/Adding_USB.png}
+        
+    \end{itemize}
+
+    \item \textbf{Zusammenfassung und Lösung:}\\
+    Das Hauptproblem lag darin, dass das Image von NVidia zu neu für die Hardware war. Laden Sie JetPack 5 herunter, flashen Sie das Image und booten Sie. Danach können Sie das neue Image verwenden.
+    \par \bigskip
+
+\end{enumerate}
 
 \end{document}
