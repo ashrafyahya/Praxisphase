@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.29)  1 DEC 2024 14:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.29)  1 DEC 2024 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -303,7 +303,7 @@ Overfull \hbox (7.61276pt too wide) in paragraph at lines 22--23
 \OT1/cmr/m/n/10 Das NVIDIA$[]$ Jet-son Orin Nano$[]$ De-vel-oper Kit erm^^?oglicht die En-twick-lung von KI-gesteuerten Robotern,
  []
 
-<jetsonOrinNano8GB.png, id=56, 635.70833pt x 488.49167pt>
+<jetsonOrinNano8GB.png, id=64, 635.70833pt x 488.49167pt>
 File: jetsonOrinNano8GB.png Graphic file (type png)
 <use jetsonOrinNano8GB.png>
 Package pdftex.def Info: jetsonOrinNano8GB.png  used on input line 27.
@@ -319,7 +319,7 @@ Package pdftex.def Info: jetsonOrinNano8GB.png  used on input line 27.
 [3
 
 ]
-<SD_Card_Formatter.png, id=87, 393.47pt x 430.60875pt>
+<SD_Card_Formatter.png, id=95, 393.47pt x 430.60875pt>
 File: SD_Card_Formatter.png Graphic file (type png)
 <use SD_Card_Formatter.png>
 Package pdftex.def Info: SD_Card_Formatter.png  used on input line 97.
@@ -329,12 +329,12 @@ Package pdftex.def Info: SD_Card_Formatter.png  used on input line 97.
 [4
 
  <./SD_Card_Formatter.png>]
-<Etcher.png, id=95, 513.92pt x 326.21875pt>
+<Etcher.png, id=103, 513.92pt x 326.21875pt>
 File: Etcher.png Graphic file (type png)
 <use Etcher.png>
 Package pdftex.def Info: Etcher.png  used on input line 116.
 (pdftex.def)             Requested size: 362.37569pt x 230.02904pt.
-<Etcher_Select_Drive.png, id=96, 513.92pt x 325.215pt>
+<Etcher_Select_Drive.png, id=104, 513.92pt x 325.215pt>
 File: Etcher_Select_Drive.png Graphic file (type png)
 <use Etcher_Select_Drive.png>
 Package pdftex.def Info: Etcher_Select_Drive.png  used on input line 121.
@@ -344,12 +344,12 @@ Package pdftex.def Info: Etcher_Select_Drive.png  used on input line 121.
 [5 <./Etcher.png> <./Etcher_Select_Drive.png>]
 
 [6]
-<jetson-orin-nano-dev-kit-sd-slot.jpg, id=110, 1341.01pt x 1317.92375pt>
+<jetson-orin-nano-dev-kit-sd-slot.jpg, id=118, 1341.01pt x 1317.92375pt>
 File: jetson-orin-nano-dev-kit-sd-slot.jpg Graphic file (type jpg)
 <use jetson-orin-nano-dev-kit-sd-slot.jpg>
 Package pdftex.def Info: jetson-orin-nano-dev-kit-sd-slot.jpg  used on input line 148.
 (pdftex.def)             Requested size: 362.37569pt x 356.1257pt.
-<jetson_booted_screen.png, id=111, 903.375pt x 564.60938pt>
+<jetson_booted_screen.png, id=119, 903.375pt x 564.60938pt>
 File: jetson_booted_screen.png Graphic file (type png)
 <use jetson_booted_screen.png>
 Package pdftex.def Info: jetson_booted_screen.png  used on input line 166.
@@ -370,21 +370,21 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `Jetson_Orin_Nano_Anleitung.out' has not changed.
-(rerunfilecheck)             Checksum: 056A4F85252BBB9CEFF318BB53F7E054;3050.
+(rerunfilecheck)             Checksum: AA926A3D5676C35541ACA4C700F0F495;3342.
  ) 
 Here is how much of TeX's memory you used:
- 9631 strings out of 473329
- 151298 string characters out of 5715648
+ 9635 strings out of 473329
+ 151358 string characters out of 5715648
  556943 words of memory out of 5000000
- 32635 multiletter control sequences out of 15000+600000
+ 32637 multiletter control sequences out of 15000+600000
  563512 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,79p,515b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Jetson_Orin_Nano_Anleitung.pdf (9 pages, 3688104 bytes).
+Output written on Jetson_Orin_Nano_Anleitung.pdf (9 pages, 3688990 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
