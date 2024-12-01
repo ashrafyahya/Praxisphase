@@ -61,7 +61,7 @@ Das NVIDIA\textsuperscript{\textregistered} Jetson Orin Nano\textsuperscript{\te
     \item USB-Kabel
     \item Zunächst ist ein Computer mit Internetverbindung und der Fähigkeit zum Flashen der microSD-Karte ebenfalls erforderlich.
 \end{itemize}
-\newpage
+\clearpage
 \section*{Firmware aktualisieren (falls erforderlich)}
 
 Ihr Jetson Orin Nano Developer Kit ist möglicherweise bereits bereit, JetPack 6 auszuführen, da die neueste Firmware (\textit{Jetson UEFI Firmware} auf QSPI-NOR Flash-Speicher) ab Werk geflasht wurde.
@@ -75,7 +75,7 @@ Folgen Sie den Anweisungen \textcolor{blue}{\href{https://www.jetson-ai-lab.com/
 Sobald Sie bestätigt haben, dass Ihr Jetson Orin Nano Developer Kit die neueste Firmware hat, die JetPack 6 ausführen kann, fahren Sie mit dem nächsten Schritt fort.
 
 
-\newpage
+\clearpage
 \section{Image auf die microSD-Karte schreiben}
 
 Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Karte mit dem richtigen Image vorbereiten. Folgen Sie diesen Schritten:
@@ -134,7 +134,7 @@ Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Kart
     \item Werfen Sie die microSD-Karte sicher aus, um Datenbeschädigungen zu vermeiden.
 \end{itemize}
 
-\newpage
+\clearpage
 \section{Einrichtung und erster Start}
 
 \subsection{1. Verbindungen herstellen}
@@ -144,68 +144,49 @@ Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Kart
     \item \textbf{Netzwerkverbindung herstellen:} Ethernet-Kabel anschließen.
     \item \textbf{Stromversorgung anschließen:} 19V-Netzteil mit dem DC-Eingang verbinden.
 \end{itemize}
+\begin{center}
+    \includegraphics[width=0.8\textwidth ]{jetson-orin-nano-dev-kit-sd-slot.jpg}
+\end{center}
 
-\subsection{2. Erster Start}
+\subsection{Erster Start}
+Eine grüne LED neben dem USB-C-Anschluss leuchtet auf, sobald das Developer Kit eingeschaltet wird. Beim ersten Bootvorgang führt Sie das Jetson Orin Nano Developer Kit durch die ersten Einrichtungsschritte, darunter:
+
 \begin{itemize}
-    \item Das Developer Kit startet automatisch. Die grüne LED leuchtet.
-    \item Folgen Sie den Anweisungen zur Einrichtung (EULA, Sprache, Zeitzone, WLAN, Benutzerkonto).
+    \item Überprüfung und Akzeptanz der NVIDIA Jetson Software-EULA
+    \item Auswahl der Systemsprache, Tastaturlayouts und Zeitzone
+    \item Verbindung mit dem drahtlosen Netzwerk
+    \item Erstellen eines Benutzernamens, Passworts und Computernamens
+    \item Anmeldung
 \end{itemize}
 
-\subsection{3. Nach dem Login}
+\subsection{Nach dem Login}
+Sie werden das folgendes Sehen.
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth ]{jetson_booted_screen.png}
+\end{center}
+\par \bigskip 
+
+führen Sie folgende Befehle aus. 
 \begin{verbatim}
 sudo apt update
 sudo apt upgrade
 \end{verbatim}
-
+\clearpage
 \section{Nächste Schritte}
+\subsection*{Sich zurechtfinden}
+
+Lesen Sie \textcolor{blue}{\href{https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html}{das Benutzerhandbuch des Jetson Orin Nano Developer Kits}}, das Folgendes beinhaltet:
 \begin{itemize}
-    \item Verwenden Sie den Jetson SDK Manager, um zusätzliche NVIDIA-Softwarepakete zu installieren.
-    \item Besuchen Sie die NVIDIA Developer Website für Tutorials und Beispiele.
+    \item Viele weitere Details zur Hardware des Developer Kits
+    \item Eine Übersicht über NVIDIA JetPack und Möglichkeiten, das Developer Kit zu flashen
+    \item Besuchen Sie die \textcolor{blue}{\href{https://developer.nvidia.com/embedded-computing}{NVIDIA Jetson Developer-Website}} für Zugriff auf alle Informationen zur Jetson-Plattform.
+    \item Stellen Sie Fragen oder teilen Sie ein Projekt im \textcolor{blue}{\href{https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70}{NVIDIA Jetson Forum}}.
 \end{itemize}
-
-\section{Technische Spezifikationen}
-
-\subsection{Prozessor (CPU)}
+\subsection{Benutzerdefinierte vorab konfigurierte SD-Karten-Abbilder}
+Folgen Sie dem \textcolor{blue}{\href{https://nvidia-ai-iot.github.io/jetson_isaac_ros_visual_slam_tutorial/}{Jetson Isaac ROS Visual SLAM Tutorial}}, das Sie anleitet:
 \begin{itemize}
-    \item \textbf{Architektur:} ARM Cortex-A78AE
-    \item \textbf{Kerne:} 6 Kerne, bis zu 1,5 GHz
+    \item Richten Sie Ihr Jetson Orin Nano Developer Kit mit einer Intel RealSense Kamera ein, um die erstklassige VSLAM-Bibliothek schnell zu testen
+    \item Mit einem vorab konfigurierten \textcolor{blue}{\href{https://nvidia-ai-iot.github.io/jetson_isaac_ros_visual_slam_tutorial/}{SD-Karten-Image}}, das einen Großteil des Einrichtungsprozesses vereinfacht
 \end{itemize}
-
-\subsection{Grafikprozessor (GPU)}
-\begin{itemize}
-    \item \textbf{Architektur:} NVIDIA Ampere, 64 Tensor Cores, 40 TOPS
-\end{itemize}
-
-\subsection{Speicher (RAM)}
-\begin{itemize}
-    \item 4 GB oder 8 GB LPDDR5, bis zu 68 GB/s Bandbreite
-\end{itemize}
-
-\subsection{Schnittstellen und I/O}
-\begin{itemize}
-    \item PCIe Gen 3 x4, USB 3.2, Gigabit-Ethernet
-    \item HDMI 2.1, DP 1.2, 2x MIPI CSI-2 Kameraanschlüsse
-\end{itemize}
-
-\subsection{Leistung und Energieverbrauch}
-\begin{itemize}
-    \item Einstellbarer Energieverbrauch: 7 W bis 15 W
-\end{itemize}
-
-\subsection{Softwareunterstützung}
-\begin{itemize}
-    \item Linux for Tegra (L4T), Unterstützung für CUDA 11, C++, Python, TensorFlow, PyTorch
-\end{itemize}
-
-\section{Vergleich der Modelle}
-
-\begin{longtable}{|l|c|c|c|}
-    \hline
-    \textbf{Modell} & \textbf{RAM} & \textbf{Leistung (TOPS)} & \textbf{Energieverbrauch} \\
-    \hline
-    Jetson Orin Nano 4GB & 4 GB & 20 TOPS & 7–15 W \\
-    Jetson Orin Nano 8GB & 8 GB & 40 TOPS & 7–15 W \\
-    \hline
-\end{longtable}
-
 \end{document}

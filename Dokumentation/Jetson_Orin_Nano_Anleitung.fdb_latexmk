@@ -1,12 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1733056967.56979 "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/Jetson_Orin_Nano_Anleitung.tex" "Jetson_Orin_Nano_Anleitung.pdf" "Jetson_Orin_Nano_Anleitung" 1733056970.02564 0
+["pdflatex"] 1733060271.63211 "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/Jetson_Orin_Nano_Anleitung.tex" "Jetson_Orin_Nano_Anleitung.pdf" "Jetson_Orin_Nano_Anleitung" 1733060274.25572 0
   "Etcher.png" 1733056788 21508 8f476aa1aa8c844bda4a1e2d49f4aa7e ""
   "Etcher_Select_Drive.png" 1733056878 21835 04c886a84cd2f6279deced58e9133715 ""
-  "Jetson_Orin_Nano_Anleitung.aux" 1733056969 3092 005bbe73d89f9de8b427f23838789aa6 "pdflatex"
-  "Jetson_Orin_Nano_Anleitung.out" 1733056969 4066 ee95647163f6541d7bbc0b9f9ad6c333 "pdflatex"
-  "Jetson_Orin_Nano_Anleitung.tex" 1733056966 7989 bf3bf725bd0bdc05c9ce6e3e65b5c9bd ""
+  "Jetson_Orin_Nano_Anleitung.aux" 1733060274 2107 ae4d0766ec455c7338cecbbe41330d47 "pdflatex"
+  "Jetson_Orin_Nano_Anleitung.out" 1733060274 3050 056a4f85252bbb9ceff318bb53f7e054 "pdflatex"
+  "Jetson_Orin_Nano_Anleitung.tex" 1733060270 8610 7eced72c986929ccb0afa9ec3db46130 ""
   "SD_Card_Formatter.png" 1733055198 13012 7f7cd4a200a29fd8d47a3673d787d3c0 ""
-  "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/Jetson_Orin_Nano_Anleitung.tex" 1733056966 7989 bf3bf725bd0bdc05c9ce6e3e65b5c9bd ""
+  "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/Jetson_Orin_Nano_Anleitung.tex" 1733060270 8610 7eced72c986929ccb0afa9ec3db46130 ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1732896363 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1732897936 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1732897255 1536 73da8e8f1d2a4c957d51ca133585586b ""
@@ -84,7 +84,9 @@
   "e:/StudiemSoftware/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732904593 5521792 6424f49fff735520198fc944b10913c8 ""
   "e:/StudiemSoftware/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732904973 3343792 176eacf91554fde3da4ef5fb94e94437 ""
   "e:/StudiemSoftware/texlive/2024/texmf.cnf" 1732904517 713 e69b156964470283e0530f5060668171 ""
+  "jetson-orin-nano-dev-kit-sd-slot.jpg" 1733058500 249619 daf12b55ef23680e62345d7cf7db59f3 ""
   "jetsonOrinNano8GB.png" 1733054038 2411726 3d9457f646dd3d6105d79d84c347e056 ""
+  "jetson_booted_screen.png" 1733058829 935376 2fddaa5a716d326d15a641f3b0e884b6 ""
   (generated)
   "Jetson_Orin_Nano_Anleitung.aux"
   "Jetson_Orin_Nano_Anleitung.log"
