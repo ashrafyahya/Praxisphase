@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1733060436.76464 "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/jetsonOrinNano8GB.tex" "jetsonOrinNano8GB.pdf" "jetsonOrinNano8GB" 1733060439.21249 0
-  "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/jetsonOrinNano8GB.tex" 1733060436 1736 26bb9ec53ab5f95e975ca03d8e8d373a ""
+["pdflatex"] 1733065011.3521 "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/jetsonOrinNano8GB.tex" "jetsonOrinNano8GB.pdf" "jetsonOrinNano8GB" 1733065013.65983 0
+  "c:/Users/dell/OneDrive/Desktop/Praxisphase/Dokumentation/jetsonOrinNano8GB.tex" 1733065008 2173 eb78f614907d6b7c0e5f7a5a08f866dc ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1732896363 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1732897936 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1732897255 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -72,10 +72,10 @@
   "e:/StudiemSoftware/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732904593 5521792 6424f49fff735520198fc944b10913c8 ""
   "e:/StudiemSoftware/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732904973 3343792 176eacf91554fde3da4ef5fb94e94437 ""
   "e:/StudiemSoftware/texlive/2024/texmf.cnf" 1732904517 713 e69b156964470283e0530f5060668171 ""
-  "jetsonOrinNano8GB.aux" 1733060439 1446 ce2bbd75b61028ad2127e06e861232fd "pdflatex"
-  "jetsonOrinNano8GB.out" 1733060439 1324 ac62ce170a57607ba09c498562ff5df0 "pdflatex"
+  "jetsonOrinNano8GB.aux" 1733065013 1553 87a2d307b0b68b84adaa0289f8334ee3 "pdflatex"
+  "jetsonOrinNano8GB.out" 1733065013 1418 dc7fd0bc45bf5c4d81159f5fec9a20be "pdflatex"
   "jetsonOrinNano8GB.png" 1733054038 2411726 3d9457f646dd3d6105d79d84c347e056 ""
-  "jetsonOrinNano8GB.tex" 1733060436 1736 26bb9ec53ab5f95e975ca03d8e8d373a ""
+  "jetsonOrinNano8GB.tex" 1733065008 2173 eb78f614907d6b7c0e5f7a5a08f866dc ""
   (generated)
   "jetsonOrinNano8GB.aux"
   "jetsonOrinNano8GB.log"

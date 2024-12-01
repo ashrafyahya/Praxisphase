@@ -136,11 +136,11 @@ INPUT ./jetsonOrinNano8GB.png
 INPUT ./jetsonOrinNano8GB.png
 INPUT ./jetsonOrinNano8GB.png
 INPUT ./jetsonOrinNano8GB.png
-INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT e:/StudiemSoftware/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT e:/StudiemSoftware/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT jetsonOrinNano8GB.aux
 INPUT ./jetsonOrinNano8GB.out
 INPUT ./jetsonOrinNano8GB.out
