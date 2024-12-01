@@ -1,0 +1,15 @@
+# Ignoriere LaTeX-Hilfsdateien
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+
+# Ignoriere YAML-Dateien (falls gewünscht)
+*.yaml
+
+# Ausnahme für PDF und TeX
+!*.tex
+!*.pdf
