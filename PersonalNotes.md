@@ -50,3 +50,10 @@ https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/h
 
 BildQuelle
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html
+
+Operating Requirements
+Temp. Range (T J )*: -25°C – 105F°C | Supported Power Input: 5V | Operating Lifetime (24x7): 5 years
+Jetson Orin Nano 8GB Modes: 7W | 15W
+Jetson Orin Nano 4GB Modes: 7W | 10W
+Seite 9 in Datasheet
+
