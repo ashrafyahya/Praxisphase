@@ -47,3 +47,6 @@ sudo usermod -aG wheel ashraf
 
 Jetson PINs 
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/hardware_spec.html
+
+BildQuelle
+https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html
