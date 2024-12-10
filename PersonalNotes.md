@@ -44,3 +44,6 @@ hostnamectl
 
 sudo usermod -aG sudo ashraf
 sudo usermod -aG wheel ashraf
+
+Jetson PINs
+https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/hardware_spec.html
