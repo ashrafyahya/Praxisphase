@@ -4,7 +4,7 @@
 \usepackage{xcolor}
 \usepackage{geometry}
 
-\geometry{a4paper, margin=1in}
+\geometry{a4paper, margin=0.5in}
 
 
 % Farben für den Code-Block definieren
@@ -158,10 +158,11 @@ python3 detect.py --source 0
 % python3 detect.py --source 0  Für Kamera-Input
 
 Falls ein Fehler wie folgend auftritt: 
-\textit{ValueError: numpy.dtype size changed, may indicate binary incompatibility. 
-Expected 96 from C header, got 88 from PyObject}
 
-Nutze diesen Befehl zur Behebung:
+\textit{ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 
+\indent from PyObject}
+
+Nutzen Sie diesen Befehl zur Behebung:
 \begin{lstlisting}[language=bash]
 pip3 install --upgrade --force-reinstall -r requirements.txt
 \end{lstlisting}
@@ -186,7 +187,7 @@ Wiederholen Sie die vorherigen Schritte.
 % \end{lstlisting}
 \clearpage
 \section{YOLOv5 startet}
-die Kamera wird geöffnet und der Modell fängt an Objekte zu erkennen.
+Die Kamera wird geöffnet und der Modell fängt an Objekte zu erkennen.
 Dabei sieht der Terminal wie folgendes aus: 
 \begin{figure}[h!]
     \centering
