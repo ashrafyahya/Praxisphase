@@ -51,12 +51,4 @@ https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/h
 BildQuelle
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html
 
-Operating Requirements
-Temp. Range (T J )*: -25°C – 105F°C | Supported Power Input: 5V | Operating Lifetime (24x7): 5 years
-Jetson Orin Nano 8GB Modes: 7W | 15W
-Jetson Orin Nano 4GB Modes: 7W | 10W
-Seite 9 in Datasheet
-
-Yes, for devkit it can be 9-20V as there is a power mux on board to choose supply to module. For custom design, should note the voltage level to Orin nano module should be 4.75-5.25V.
-https://forums.developer.nvidia.com/t/battery/278439/3
-
+VDD_IN Main power – Supplies PMIC and other registers
