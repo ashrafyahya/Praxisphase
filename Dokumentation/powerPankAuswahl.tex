@@ -15,39 +15,61 @@
 \maketitle
 
 \section{Einleitung}
-Um den NVIDIA Jetson Orin Nano autonom zu betreiben, ist eine geeignete Stromquelle erforderlich, die das Developer-Kit ausschließlich über den Barrel-Jack mit 19 V versorgt, die sowohl die Anforderungen des Jetson-Boards als auch den Energieverbrauch während der dauerhaften Objekterkennung deckt. In dieser Arbeit werden die Energieanforderungen des Jetson Orin Nano untersucht. Das mitgelieferte Netzteil liefert 19.0 V und 2.37 A als Ausgang, was für die Versorgung des Kits ideal ist. Laut \textcolor{blue}{\href{https://developer.download.nvidia.com/assets/embedded/secure/jetson/orin_nano/docs/Jetson-Orin-Nano-DevKit-Carrier-Board-Specification_SP-11324-001_v1.2.pdf?KmgI9RJCufnwzXmxbGPExVQp1r131wrAPSzR9RMDhh83EhjqXKmYVbjwEjUNXPMiO3peL2R_7D_xp9mFQTBkPF-Bon3l72rEZPIiNTVUv5oIjQsvFsQ0pqAZxr16W-12GNU3N596RY1rC1tgxd5_XwyvJRNhcRcOank-v-QwQweH0clhI5Vvdy5dZVF-qYLeuslCScepJxD-v-TAHS2XuNFpJb69-WoTOPi_AyxiG2scwgKnqQ==&t=eyJscyI6IndlYnNpdGUiLCJsc2QiOiJkZXZlbG9wZXIubnZpZGlhLmNvbS9lbWJlZGRlZC9kb3dubG9hZHMjP3NlYXJjaD1EYXRhJTIwU2hlZXRcdTAwMjZ0eD0kcHJvZHVjdCxqZXRzb25fYWd4X29yaW4samV0c29uX29yaW5fbngsamV0c29uX29yaW5fbmFubyJ9}{NVIDIA}} unterstützt das Kit einen Versorgungsspannungsbereich von 9 V bis 20 V und hat einen Leistungsbedarf zwischen 7 W und 15 W., mögliche Batterien und Powerbanks zur Stromversorgung vorgestellt und berechnet, wie lange der Jetson Orin Nano bei kontinuierlicher Objekterkennung betrieben werden kann.
+Um den NVIDIA Jetson Orin Nano autonom zu betreiben, ist eine geeignete Stromquelle erforderlich, 
+die das Developer-Kit ausschließlich über den Barrel-Jack mit 19 V versorgt, 
+die sowohl die Anforderungen des Jetson-Boards als auch den Energieverbrauch 
+während der dauerhaften Objekterkennung deckt. In dieser Arbeit werden die Energieanforderungen 
+des Jetson Orin Nano untersucht. Das mitgelieferte Netzteil liefert 19.0 V und 2.37 A als Ausgang, 
+was für die Versorgung des Kits ideal ist. Laut \textcolor{blue}{\href{https://developer.download.nvidia.com/assets/embedded/secure/jetson/orin_nano/docs/Jetson-Orin-Nano-DevKit-Carrier-Board-Specification_SP-11324-001_v1.2.pdf?KmgI9RJCufnwzXmxbGPExVQp1r131wrAPSzR9RMDhh83EhjqXKmYVbjwEjUNXPMiO3peL2R_7D_xp9mFQTBkPF-Bon3l72rEZPIiNTVUv5oIjQsvFsQ0pqAZxr16W-12GNU3N596RY1rC1tgxd5_XwyvJRNhcRcOank-v-QwQweH0clhI5Vvdy5dZVF-qYLeuslCScepJxD-v-TAHS2XuNFpJb69-WoTOPi_AyxiG2scwgKnqQ==&t=eyJscyI6IndlYnNpdGUiLCJsc2QiOiJkZXZlbG9wZXIubnZpZGlhLmNvbS9lbWJlZGRlZC9kb3dubG9hZHMjP3NlYXJjaD1EYXRhJTIwU2hlZXRcdTAwMjZ0eD0kcHJvZHVjdCxqZXRzb25fYWd4X29yaW4samV0c29uX29yaW5fbngsamV0c29uX29yaW5fbmFubyJ9}{NVIDIA}} 
+unterstützt das Kit einen Versorgungsspannungsbereich von 9 V bis 20 V und hat einen Leistungsbedarf 
+zwischen 7 W und 15 W, mögliche Batterien und Powerbanks zur Stromversorgung vorgestellt und berechnet, 
+wie lange der Jetson Orin Nano bei kontinuierlicher Objekterkennung betrieben werden kann.
 
 \section{Strombedarf des Jetson Orin Nano}
-Der Strombedarf des Jetson Orin Nano hängt von der Auslastung des Systems ab. Im Allgemeinen wird er in folgenden Bereichen liegen:
+Der Strombedarf des Jetson Orin Nano hängt von der Auslastung des Systems ab. 
+Im Allgemeinen wird er in folgenden Bereichen liegen:
 
 \begin{itemize}
     \item \textbf{Leerlauf}: 5-7 W
     \item \textbf{Moderate Last}: 7-10 W
-    \item \textbf{Maximale Leistung}: 15 W (mit Peripheriegeräten bis zu 20 W)
+    \item \textbf{Maximale Leistung}: 15 W 
 \end{itemize}
 
 Für Anwendungen wie die Objekterkennung (z.B. YOLO, SSD) wird der Verbrauch 
 \indent typischerweise im Bereich von 10 bis 15 W liegen.
 
 \subsection{Stromversorgung}
-Der Jetson Orin Nano 8GB und das Jetson Orin Nano Developer Kit unterscheiden sich in ihren Anforderungen an die Stromversorgung, wobei der Jetson Orin Nano 8GB seine Stromversorgung direkt über das Developer Kit bezieht:
+Der Jetson Orin Nano 8GB und das Jetson Orin Nano Developer Kit unterscheiden 
+sich in ihren Anforderungen an die Stromversorgung, wobei der Jetson Orin Nano 
+8GB seine Stromversorgung direkt über das Developer Kit bezieht:
 \begin{itemize}
-    \item \textbf{Jetson Orin Nano 8GB}: Dieses Modell benötigt eine stabile Eingangsspannung von \textbf{5V}, typischerweise mit einem Strombedarf von \textbf{3A bis 4A}. Es wird über das Developer Kit mit Strom versorgt.
-    \item \textbf{Jetson Orin Nano Developer Kit}: Das Developer Kit selbst kann ausschließlich über den Barrel-Jack betrieben werden und unterstützt einen Eingangsspannungsbereich von \textbf{9V bis 20V}. Der Strombedarf des Kits liegt je nach Leistungskonfiguration zwischen \textbf{7W und 15W}.
+    \item \textbf{Jetson Orin Nano 8GB}: Dieses Modell benötigt eine stabile 
+    Eingangsspannung von \textbf{5V}. Es wird über das Developer Kit mit Strom versorgt.
+    \item \textbf{Jetson Orin Nano Developer Kit}: Das Developer Kit selbst kann 
+    ausschließlich über den Barrel-Jack betrieben werden und unterstützt einen 
+    Eingangsspannungsbereich von \textbf{9V bis 20V}. Der Strombedarf des Kits liegt je 
+    nach Leistungskonfiguration zwischen \textbf{7W und 15W}.
 \end{itemize}
-Dieser Unterschied ist entscheidend bei der Wahl der Stromquelle, da das Developer Kit die Spannungsversorgung des Jetson Orin Nano 8GB sicherstellt und zusätzlich den breiteren Spannungsbereich unterstützt.
+Dieser Unterschied ist entscheidend bei der Wahl der Stromquelle, da das Developer 
+Kit die Spannungsversorgung des Jetson Orin Nano 8GB sicherstellt und zusätzlich den 
+breiteren Spannungsbereich unterstützt.
 
 \section{Energiequelle: Batterie oder Powerbank}
 
 \subsection{Powerbank}
-Eine Powerbank ist eine einfache Lösung, um den Jetson Orin Nano autonom zu betreiben. Die Powerbank sollte folgende Eigenschaften aufweisen:
+Eine Powerbank ist eine einfache Lösung, um den Jetson Orin Nano autonom zu betreiben. 
+Die Powerbank sollte folgende Eigenschaften aufweisen:
 \begin{itemize}
-    \item \textbf{Unterstützung von USB-PD (Power Delivery)}: Sie sollte mindestens 15W bis 20W bei 9V liefern können.
-    \item \textbf{Kapazität}: Um den Jetson für längere Zeit autonom zu betreiben, sollte die Powerbank eine hohe Kapazität besitzen.
+    \item \textbf{Unterstützung von USB-PD (Power Delivery)}: Sie sollte 15W bei 9V 
+    
+    liefern können.
+    \item \textbf{Kapazität}: Um den Jetson für längere Zeit autonom zu betreiben, 
+    sollte die Powerbank eine hohe Kapazität besitzen.
 \end{itemize}
 
 \subsection{Beispielrechnung für Powerbank}
-Wenn die Powerbank eine Kapazität von 12V und 5200 mAh (entspricht 62.4 Wh) hat und der Jetson Orin Nano 15 W verbraucht, lässt sich die Betriebsdauer wie folgt berechnen:
+Wenn die Powerbank eine Kapazität von 12V und 5200 mAh (entspricht 62.4 Wh) hat und der 
+Jetson Orin Nano 15 W verbraucht, lässt sich die Betriebsdauer wie folgt berechnen:
 
 \[
 \text{Betriebsdauer} = \frac{\text{Kapazität der Powerbank in Wh}}{\text{Leistungsbedarf des Jetson Orin Nano in W}}
@@ -58,12 +80,14 @@ Für diese Powerbank ergibt sich:
 \text{Betriebsdauer} = \frac{62.4 \, \text{Wh}}{15 \, \text{W}} \approx 4.16 \, \text{Stunden}
 \]
 
-Dies zeigt, dass die Powerbank den Jetson Orin Nano bei einer Leistung von 15 W \indent für ungefähr 4 Stunden und 10 Minuten betreiben kann. Beachten Sie, dass Effizienz- 
+Dies zeigt, dass die Powerbank den Jetson Orin Nano bei einer Leistung von 15 W 
+\indent für ungefähr 4 Stunden und 10 Minuten betreiben kann. Beachten Sie, dass Effizienz- 
 \indent verluste des Spannungswandlers und andere Verbraucher im System diese Laufzeit 
 \indent verringern können.
 
 \subsection{Batterie}
-Eine Li-Ion oder LiFePO4-Batterie bietet eine weitere Möglichkeit, den Jetson Orin Nano autonom zu betreiben. Typische Parameter einer solchen Batterie:
+Eine Li-Ion oder LiFePO4-Batterie bietet eine weitere Möglichkeit, den Jetson Orin Nano 
+autonom zu betreiben. Typische Parameter einer solchen Batterie:
 \[
 \begin{aligned}
     &\textbf{Spannung:} \quad 12V \text{ bis } 19V \\
@@ -73,55 +97,72 @@ Eine Li-Ion oder LiFePO4-Batterie bietet eine weitere Möglichkeit, den Jetson O
 
 
 \subsubsection{Beispielrechnung für Batterie}
-Wenn die Batterie eine Kapazität von 240 Wh hat und der Jetson Orin Nano 15 W verbraucht, lässt sich die Betriebsdauer wie folgt berechnen:
+Wenn die Batterie eine Kapazität von 240 Wh hat und der Jetson Orin Nano 15 W verbraucht, 
+lässt sich die Betriebsdauer wie folgt berechnen:
 \[
 \text{Betriebsdauer} = \frac{240}{15} \approx 16 \, \text{Stunden}
 \]
 
-\section{Optimierung der Energieeffizienz}
+% \section{Optimierung der Energieeffizienz}
 
-\subsection{Energiemodi des Jetson Orin Nano}
-Der Jetson Orin Nano bietet verschiedene Energiemodi, um den Energieverbrauch zu steuern:
-\begin{itemize}
-    \item \textbf{Standardleistung}: 
-    \begin{verbatim}
-    sudo nvpmodel -m 0
-    \end{verbatim}
-    Maximale Leistung (ca. 15 W).
+% \subsection{Energiemodi des Jetson Orin Nano}
+% Der Jetson Orin Nano bietet verschiedene Energiemodi, um den Energieverbrauch zu steuern:
+% \begin{itemize}
+%     \item \textbf{Standardleistung}: 
+%     \begin{verbatim}
+%     sudo nvpmodel -m 0
+%     \end{verbatim}
+%     Maximale Leistung (ca. 15 W).
     
-    \item \textbf{Energiesparmodus}: 
-    \begin{verbatim}
-    sudo nvpmodel -m 1
-    \end{verbatim}
-    Reduziert den Verbrauch auf etwa 7-10 W.
+%     \item \textbf{Energiesparmodus}: 
+%     \begin{verbatim}
+%     sudo nvpmodel -m 1
+%     \end{verbatim}
+%     Reduziert den Verbrauch auf etwa 7-10 W.
     
-    \item \textbf{Taktrate anpassen}: 
-    \begin{verbatim}
-    sudo jetson_clocks --show
-    sudo jetson_clocks --store
-    \end{verbatim}
-    Optimiert die Taktraten für den Energieverbrauch.
-\end{itemize}
+%     \item \textbf{Taktrate anpassen}: 
+%     \begin{verbatim}
+%     sudo jetson_clocks --show
+%     sudo jetson_clocks --store
+%     \end{verbatim}
+%     Optimiert die Taktraten für den Energieverbrauch.
+% \end{itemize}
 
-\subsection{Peripheriegeräte}
-Reduziere den Energieverbrauch, indem du nicht benötigte Peripheriegeräte (z.B. Monitor, Tastatur, USB-Geräte) abschaltest.
+% \subsection{Peripheriegeräte}
+% Reduziere den Energieverbrauch, indem du nicht benötigte Peripheriegeräte 
+% (z.B. Monitor, Tastatur, USB-Geräte) abschaltest.
 
 \clearpage
+
 \section{Messung des Energieverbrauchs}
-Um den tatsächlichen Energieverbrauch des Jetson Orin Nano zu messen, kann man folgende Tools verwenden:
+Um den tatsächlichen Energieverbrauch des Jetson Orin Nano zu messen, kann man folgende 
+Tools verwenden:
 \begin{itemize}
     \item \textbf{Software-Tools auf dem Jetson}:
     \begin{verbatim}
     tegrastats
     \end{verbatim}
-    Dieses Tool zeigt die CPU-, GPU- und RAM-Auslastung sowie den Energieverbrauch in Echtzeit.
+    Dieses Tool zeigt die CPU-, GPU- und RAM-Auslastung sowie den Energieverbrauch in 
+    Echtzeit.
+
+    \begin{verbatim}
+        Jetson GUI
+    \end{verbatim}
 
     \item \textbf{Externe Messgeräte}: 
-    Verwende ein USB-Leistungsmessgerät oder einen DC-Wattmeter, um den Energieverbrauch präzise zu messen.
-\end{itemize}
-
+    \begin{verbatim}
+        Multimeter
+    \end{verbatim}
+    Man kann den Multimeter nutzen, um den verbrauchten Strom zu ermitteln.
+    
+    \end{itemize}
 \section{Fazit}
-Für kurze Tests reicht eine Powerbank mit mindestens 20.000 mAh und USB-C PD aus. Für längeren autonomen Betrieb empfiehlt sich eine Batterie mit einer Kapazität von 12V 20Ah oder 19V 10Ah. Der typische Verbrauch des Jetson Orin Nano bei Objekterkennung liegt bei 10-15 W, was mit einer Powerbank von 20.000 mAh etwa 4-6 Stunden Laufzeit ergibt. Eine 12V 20Ah Batterie könnte bis zu 16 Stunden Betrieb ermöglichen.
+Für kurze Tests reicht eine Powerbank mit mindestens 20.000 mAh und USB-C PD aus. 
+Für längeren autonomen Betrieb empfiehlt sich eine Batterie mit einer Kapazität 
+von 12V 20Ah oder 19V 10Ah. Der typische Verbrauch des Jetson Orin Nano bei 
+Objekterkennung liegt bei 10-15 W, was mit einer Powerbank von 20.000 mAh 
+etwa 4-6 Stunden Laufzeit ergibt. Eine 12V 20Ah Batterie könnte bis zu 16 Stunden 
+Betrieb ermöglichen.
 
 \section{Quellen}
 \begin{itemize}
