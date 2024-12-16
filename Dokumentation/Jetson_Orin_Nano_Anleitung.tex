@@ -47,9 +47,11 @@ Das NVIDIA\textsuperscript{\textregistered} Jetson Orin Nano\textsuperscript{\te
 
 \begin{itemize}
     \item Jetson Orin Nano Modul mit microSD-Kartensteckplatz
-    \item Referenzträgerplatine (inklusive 802.11 Plug-in WLAN \& BT-Modul vorinstalliert mit Antenne)
+    \item Referenzträgerplatine (inklusive 802.11 Plug-in WLAN 
+    \& BT-Modul vorinstalliert mit Antenne)
     \item 19V Netzteil
-    \item Eine kleine Papierkarte mit Schnellstart- und Support-Informationen
+    \item Eine kleine Papierkarte mit Schnellstart- und 
+    Support-Informationen
 \end{itemize}
 
 \subsection*{Nicht im Lieferumfang enthalten}
@@ -64,26 +66,35 @@ Das NVIDIA\textsuperscript{\textregistered} Jetson Orin Nano\textsuperscript{\te
 \clearpage
 \section*{Firmware aktualisieren (falls erforderlich)}
 
-Ihr Jetson Orin Nano Developer Kit ist möglicherweise bereits bereit, JetPack 6 auszuführen, da die neueste Firmware (\textit{Jetson UEFI Firmware} auf QSPI-NOR Flash-Speicher) ab Werk geflasht wurde.
+Ihr Jetson Orin Nano Developer Kit ist möglicherweise bereits bereit, JetPack 
+6 auszuführen, da die neueste Firmware (\textit{Jetson UEFI Firmware} auf QSPI-NOR 
+Flash-Speicher) ab Werk geflasht wurde.
 
 Falls dies nicht der Fall ist, müssen Sie auf die neueste Firmware aktualisieren.
 
-Sie können nun die neueste Firmware auf Jetson aktualisieren, ohne einen Host-Ubuntu-PC zu benötigen: Befolgen Sie die Schritte auf dieser \textcolor{blue}{\href{https://www.jetson-ai-lab.com/initial_setup_jon.html}{Seite}}, um zu überprüfen, ob Ihr Jetson Orin Nano Developer Kit die neueste Firmware hat, und aktualisieren Sie diese mit einer SD-Karte, die JetPack 5 enthält.
+Sie können nun die neueste Firmware auf Jetson aktualisieren, ohne einen Host-Ubuntu-PC 
+zu benötigen: Befolgen Sie die Schritte auf dieser \textcolor{blue}{\href{https://www.jetson-ai-lab.com/initial_setup_jon.html}{Seite}}, 
+um zu überprüfen, ob Ihr Jetson Orin Nano Developer Kit die neueste Firmware hat, 
+und aktualisieren Sie diese mit einer SD-Karte, die JetPack 5 enthält.
 
 Folgen Sie den Anweisungen \textcolor{blue}{\href{https://www.jetson-ai-lab.com/initial_setup_jon.html}{hier}}.
 
-Sobald Sie bestätigt haben, dass Ihr Jetson Orin Nano Developer Kit die neueste Firmware hat, die JetPack 6 ausführen kann, fahren Sie mit dem nächsten Schritt fort.
+Sobald Sie bestätigt haben, dass Ihr Jetson Orin Nano Developer Kit die neueste 
+Firmware hat, die JetPack 6 ausführen kann, fahren Sie mit dem nächsten Schritt fort.
 
 
 \clearpage
 \section{Image auf die microSD-Karte schreiben}
 
-Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Karte mit dem richtigen Image vorbereiten. Folgen Sie diesen Schritten:
+Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Karte 
+mit dem richtigen Image vorbereiten. Folgen Sie diesen Schritten:
 
 \subsection{Das Jetson Orin Nano Developer Kit-Image herunterladen}
 \begin{itemize}
-    \item Besuchen Sie das \href{https://developer.nvidia.com/embedded/downloads}{Jetson Download Center} und laden Sie das neueste SD-Karten-Image herunter.
-    \item Die heruntergeladene Datei liegt normalerweise im \texttt{.zip}-Format vor. Entpacken Sie die Datei, um die \texttt{.img}-Datei zu erhalten.
+    \item Besuchen Sie das \href{https://developer.nvidia.com/embedded/downloads}{Jetson Download Center} 
+    und laden Sie das neueste SD-Karten-Image herunter.
+    \item Die heruntergeladene Datei liegt normalerweise im \texttt{.zip}-Format vor. 
+    Entpacken Sie die Datei, um die \texttt{.img}-Datei zu erhalten.
 \end{itemize}
 
 \subsection{microSD-Karte in den Host-Computer einlegen}
@@ -149,7 +160,8 @@ Um Ihr Jetson Orin Nano Developer Kit einzurichten, müssen Sie die microSD-Kart
 \end{center}
 
 \subsection{Erster Start}
-Eine grüne LED neben dem USB-C-Anschluss leuchtet auf, sobald das Developer Kit eingeschaltet wird. Beim ersten Bootvorgang führt Sie das Jetson Orin Nano Developer Kit durch die ersten Einrichtungsschritte, darunter:
+Eine grüne LED neben dem USB-C-Anschluss leuchtet auf, sobald das Developer Kit eingeschaltet wird. 
+Beim ersten Bootvorgang führt Sie das Jetson Orin Nano Developer Kit durch die ersten Einrichtungsschritte, darunter:
 
 \begin{itemize}
     \item Überprüfung und Akzeptanz der NVIDIA Jetson Software-EULA
@@ -176,18 +188,21 @@ sudo apt upgrade
 \section{Nächste Schritte}
 \subsection*{Sich zurechtfinden}
 
-Lesen Sie \textcolor{blue}{\href{https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html}{das Benutzerhandbuch des Jetson Orin Nano Developer Kits}}, das Folgendes beinhaltet:
+Lesen Sie \textcolor{blue}{\href{https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html}{das Benutzerhandbuch des Jetson Orin Nano Developer Kits}}, 
+das Folgendes beinhaltet:
 \begin{itemize}
     \item Viele weitere Details zur Hardware des Developer Kits
     \item Eine Übersicht über NVIDIA JetPack und Möglichkeiten, das Developer Kit zu flashen
-    \item Besuchen Sie die \textcolor{blue}{\href{https://developer.nvidia.com/embedded-computing}{NVIDIA Jetson Developer-Website}} für Zugriff auf alle Informationen zur Jetson-Plattform.
+    \item Besuchen Sie die \textcolor{blue}{\href{https://developer.nvidia.com/embedded-computing}{NVIDIA Jetson Developer-Website}} 
+    für Zugriff auf alle Informationen zur Jetson-Plattform.
     \item Stellen Sie Fragen oder teilen Sie ein Projekt im \textcolor{blue}{\href{https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70}{NVIDIA Jetson Forum}}.
 \end{itemize}
 \subsection{Benutzerdefinierte vorab konfigurierte SD-Karten-Abbilder}
 Folgen Sie dem \textcolor{blue}{\href{https://nvidia-ai-iot.github.io/jetson_isaac_ros_visual_slam_tutorial/}{Jetson Isaac ROS Visual SLAM Tutorial}}, das Sie anleitet:
 \begin{itemize}
     \item Richten Sie Ihr Jetson Orin Nano Developer Kit mit einer Intel RealSense Kamera ein, um die erstklassige VSLAM-Bibliothek schnell zu testen
-    \item Mit einem vorab konfigurierten \textcolor{blue}{\href{https://nvidia-ai-iot.github.io/jetson_isaac_ros_visual_slam_tutorial/}{SD-Karten-Image}}, das einen Großteil des Einrichtungsprozesses vereinfacht
+    \item Mit einem vorab konfigurierten \textcolor{blue}{\href{https://nvidia-ai-iot.github.io/jetson_isaac_ros_visual_slam_tutorial/}{SD-Karten-Image}}, 
+    das einen Großteil des Einrichtungsprozesses vereinfacht
 \end{itemize}
 \subsection{Quellen:}
 \begin{itemize}
