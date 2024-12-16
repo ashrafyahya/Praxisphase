@@ -4,6 +4,8 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor} 
+\usepackage{graphicx}
+
 \geometry{a4paper, margin=1in}
 
 \title{Autonome Stromversorgung des Jetson Orin Nano für Objekterkennung}
@@ -152,17 +154,59 @@ Tools verwenden:
     \item \textbf{Externe Messgeräte}: 
     \begin{verbatim}
         Multimeter
-    \end{verbatim}
-    Man kann den Multimeter nutzen, um den verbrauchten Strom zu ermitteln.
-    
+\end{verbatim}
+
+\includegraphics[width=0.8\textwidth]{Bilder/Multimeter_Messung.jpeg}
+
+Man kann den Multimeter nutzen, um den verbrauchten Strom zu ermitteln.
+
+\subsection*{Ergebnisse der Messung mit Multimeter}
+
+Die Messungen des Stromverbrauchs des Jetson Orin Nano mit einem Multimeter 
+ergaben folgende Werte:
+\begin{itemize}
+    \item \textbf{Beim Hochlaufen des Jetsons}: Der Stromverbrauch lag bei \textbf{0.9 A}.
+    \item \textbf{Im Leerlauf}: Der Stromverbrauch betrug \textbf{0.4 A}.
+    \item \textbf{Während der Objekterkennung}: Der Stromverbrauch stieg auf \textbf{0.8 A}.
+\end{itemize}
+
+\subsection*{Netzkabel-Test}
+
+Der Jetson wurde mit einem Netzkabel getestet, das eine Spannung von \textbf{12V} und 
+eine Stromstärke von \textbf{900mA} liefert. 
+Selbst während der Objekterkennung hatte der Jetson keine Probleme mit dieser 
+Stromversorgung.
+
     \end{itemize}
-\section{Fazit}
-Für kurze Tests reicht eine Powerbank mit mindestens 20.000 mAh und USB-C PD aus. 
-Für längeren autonomen Betrieb empfiehlt sich eine Batterie mit einer Kapazität 
-von 12V 20Ah oder 19V 10Ah. Der typische Verbrauch des Jetson Orin Nano bei 
-Objekterkennung liegt bei 10-15 W, was mit einer Powerbank von 20.000 mAh 
-etwa 4-6 Stunden Laufzeit ergibt. Eine 12V 20Ah Batterie könnte bis zu 16 Stunden 
-Betrieb ermöglichen.
+    \section{Zusammenfassung}
+
+    Der Jetson Orin Nano benötigt eine Spannung von \textbf{12V}, wobei der 
+    Stromverbrauch typischerweise bei \textbf{1A} liegt, was einer Leistung 
+    von \textbf{12W} entspricht. Für einen stabilen Betrieb wird empfohlen, eine
+    Energiequelle zu verwenden, die bis zu \textbf{2A} liefern kann, um Lastspitzen und 
+    zusätzliche Peripheriegeräte abzudecken.
+    
+    Für kürzere Tests kann eine Powerbank mit \textbf{12V Ausgang} und einer 
+    Kapazität von mindestens \textbf{5.200 mAh} verwendet werden. 
+    
+    \subsection*{Beispiel: Nutzung einer Powerbank mit 12V und 5.200mAh}
+    
+    Die Kapazität der Powerbank in Wattstunden (Wh) berechnet sich wie folgt:
+    \[
+    \text{Energieinhalt} = \text{Spannung (V)} \times \text{Kapazität (Ah)} = 12 \, \text{V} \times 5.2 \, \text{Ah} = 62.4 \, \text{Wh}
+    \]
+    
+    Der Jetson Orin Nano benötigt im Betrieb eine Leistung von 12W. Die Laufzeit kann 
+    daher berechnet werden als:
+    \[
+    \text{Laufzeit (h)} = \frac{\text{Energieinhalt (Wh)}}{\text{Leistungsaufnahme (W)}} = \frac{62.4}{12} \approx 5.2 \, \text{Stunden}
+    \]
+    
+    \subsection*{Empfehlung für längeren Betrieb}
+    
+    Für längeren autonomen Betrieb empfiehlt sich eine Powerbank mit einer großen 
+    Kapazität wie z.b. 20Ah was 20 Stunden Betribsdauer heißt.
+    Eine geeignete Batterie mit großer Kapazität kann auch eine Lösung sein.
 
 \section{Quellen}
 \begin{itemize}
