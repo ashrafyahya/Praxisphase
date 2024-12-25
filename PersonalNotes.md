@@ -52,3 +52,8 @@ BildQuelle
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html
 
 VDD_IN Main power – Supplies PMIC and other registers
+
+
+Virtuelle Umgebung erstellen
+python3 -m venv yolov5_env
+source yolov5_env/bin/activate
