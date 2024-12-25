@@ -151,86 +151,82 @@ torch.onnx.export(model, dummy_input, "model.onnx")
     Nutzen Sie INT8/FP16-Quantisierung und andere Optimierungen.
 
 --------------------------------------------------------------------------------------------------------------------------------
-CUDA:
-CUDA (Compute Unified Device Architecture) ist eine von NVIDIA entwickelte Parallel-Computing-Plattform und Programmierumgebung. 
-Sie ermöglicht es, Allzweckberechnungen (GPGPU - General-Purpose GPU Computing) auf NVIDIA-GPUs durchzuführen. 
-Mit CUDA können Entwickler die immense Rechenleistung moderner GPUs für Anwendungen jenseits von Grafik, 
-wie z. B. maschinelles Lernen, wissenschaftliche Berechnungen oder Bildverarbeitung, nutzen.
+# CUDA:
+CUDA (Compute Unified Device Architecture) ist eine von NVIDIA entwickelte Parallel-Computing-Plattform und **Programmierumgebung**. 
+Sie ermöglicht es, **Allzweckberechnungen (GPGPU - General-Purpose GPU Computing) auf NVIDIA-GPUs durchzuführen**. 
+Mit CUDA können Entwickler die **immense Rechenleistung moderner GPUs für Anwendungen jenseits von Grafik, wie z. B. maschinelles Lernen, wissenschaftliche Berechnungen oder Bildverarbeitung, nutzen**.
 
 
-Wichtige Merkmale von CUDA
+## Wichtige Merkmale von CUDA
 
-    Parallel-Computing-Architektur:
-        CUDA ermöglicht es, eine große Anzahl von Threads gleichzeitig auszuführen. GPUs haben Tausende von Kernen, die für parallele Aufgaben optimiert sind.
+- Parallel-Computing-Architektur:
+    CUDA ermöglicht es, eine große Anzahl von Threads gleichzeitig auszuführen. GPUs haben Tausende von Kernen, die für parallele Aufgaben optimiert sind.
 
-    C/C++-ähnliche Syntax:
-        CUDA bietet eine API, die in C, C++, Python und anderen Sprachen integriert werden kann, was Entwicklern den Einstieg erleichtert.
+- C/C++-ähnliche Syntax:
+    CUDA bietet eine API, die in C, C++, Python und anderen Sprachen integriert werden kann, was Entwicklern den Einstieg erleichtert.
 
-    Speicherhierarchie:
-        CUDA bietet verschiedene Speichertypen, wie globalen Speicher, shared memory (für Kommunikation zwischen Threads) und register memory (schneller Speicher für einzelne Threads).
+- Speicherhierarchie:
+    CUDA bietet verschiedene Speichertypen, wie globalen Speicher, shared memory (für Kommunikation zwischen Threads) und register memory (schneller Speicher für einzelne Threads).
 
-    Plattformübergreifend:
-        CUDA unterstützt alle NVIDIA-GPUs und funktioniert auf Betriebssystemen wie Windows, Linux und macOS.
+- Plattformübergreifend:
+    CUDA unterstützt alle NVIDIA-GPUs und funktioniert auf Betriebssystemen wie Windows, Linux und macOS.
 
-    Massive Parallelisierung:
-        CUDA ist optimiert, um Workloads zu teilen und auf Tausende von Kernen zu verteilen, was es ideal für datenintensive Anwendungen macht.
+- Massive Parallelisierung:
+    CUDA ist optimiert, um Workloads zu teilen und auf Tausende von Kernen zu verteilen, was es ideal für datenintensive Anwendungen macht.
 
-Funktionsweise
+## Funktionsweise
 
-CUDA programmiert eine GPU als Koprozessor der CPU. Hierbei übernimmt die CPU die Steuerung und Vorbereitung der Aufgaben, während die GPU für die Berechnungen verwendet wird.
-Workflow
+**CUDA programmiert eine GPU als Koprozessor der CPU**. Hierbei übernimmt die CPU die Steuerung und Vorbereitung der Aufgaben, während die GPU für die Berechnungen verwendet wird.
 
-    Datenvorbereitung auf der CPU:
-        Daten werden in den GPU-Speicher übertragen.
-    Parallele Verarbeitung auf der GPU:
-        CUDA-Programme bestehen aus sogenannten Kernels, die parallel auf der GPU ausgeführt werden.
-    Rückübertragung der Ergebnisse:
-        Nach Abschluss der Berechnungen werden die Ergebnisse an die CPU zurückgesendet.
+## Workflow
+Datenvorbereitung auf der CPU:
+    Daten werden in den GPU-Speicher übertragen.
+Parallele Verarbeitung auf der GPU:
+    CUDA-Programme bestehen aus sogenannten Kernels, die parallel auf der GPU ausgeführt werden.
+Rückübertragung der Ergebnisse:
+    Nach Abschluss der Berechnungen werden die Ergebnisse an die CPU zurückgesendet.
 
 
-Vorteile von CUDA
+## Vorteile von CUDA
+- Leistung:
+    Massive Parallelisierung steigert die Rechenleistung erheblich.
 
-    Leistung:
-        Massive Parallelisierung steigert die Rechenleistung erheblich.
+- Effiziente Nutzung von NVIDIA-GPUs:
+    Volle Kontrolle über GPU-Ressourcen und Optimierungsmöglichkeiten.
 
-    Effiziente Nutzung von NVIDIA-GPUs:
-        Volle Kontrolle über GPU-Ressourcen und Optimierungsmöglichkeiten.
+- Ökosystem:
+    CUDA ist nahtlos in NVIDIA-Tools wie cuDNN, TensorRT und Nsight integriert.
 
-    Ökosystem:
-        CUDA ist nahtlos in NVIDIA-Tools wie cuDNN, TensorRT und Nsight integriert.
-
-    Einfacher Einstieg:
-        Intuitive APIs und Unterstützung für beliebte Programmiersprachen.
+- Einfacher Einstieg:
+    Intuitive APIs und Unterstützung für beliebte Programmiersprachen.
 
 -------------------------------------------------------------------------------------------------------------------------------------
-Framework :
+# Framework :
 Ein Framework ist eine strukturierte und wiederverwendbare Plattform, die Entwicklern hilft, Software schneller und effizienter zu erstellen. 
-Es bietet eine Sammlung von Werkzeugen, Bibliotheken und Regeln, die den Entwicklungsprozess erleichtern, indem sie 
+Es bietet **eine Sammlung von Werkzeugen, Bibliotheken und Regeln, die den Entwicklungsprozess erleichtern**, indem sie 
 häufige Aufgaben vereinfachen und eine klare Struktur vorgeben.
 
-Arten von Frameworks
-
+## Arten von Frameworks
 Frameworks gibt es für verschiedene Anwendungsbereiche:
+- Webentwicklung:
+    Beispiele: Django (Python), Spring (Java), Ruby on Rails (Ruby).
+    Nutzen: Verwaltung von Serveranfragen, Datenbankanbindung, Benutzerverwaltung.
 
-    Webentwicklung:
-        Beispiele: Django (Python), Spring (Java), Ruby on Rails (Ruby).
-        Nutzen: Verwaltung von Serveranfragen, Datenbankanbindung, Benutzerverwaltung.
+- Mobile Entwicklung:
+    Beispiele: Flutter, React Native, Xamarin.
+    Nutzen: Entwicklung von plattformübergreifenden mobilen Apps.
 
-    Mobile Entwicklung:
-        Beispiele: Flutter, React Native, Xamarin.
-        Nutzen: Entwicklung von plattformübergreifenden mobilen Apps.
+- Desktop-Anwendungen:
+    Beispiele: Electron, Qt.
+    Nutzen: Erstellung von grafischen Benutzeroberflächen (GUIs).
 
-    Desktop-Anwendungen:
-        Beispiele: Electron, Qt.
-        Nutzen: Erstellung von grafischen Benutzeroberflächen (GUIs).
+- Maschinelles Lernen und Datenverarbeitung:
+    Beispiele: TensorFlow, PyTorch, Scikit-learn.
+    Nutzen: Training und Einsatz von Modellen für maschinelles Lernen.
 
-    Maschinelles Lernen und Datenverarbeitung:
-        Beispiele: TensorFlow, PyTorch, Scikit-learn.
-        Nutzen: Training und Einsatz von Modellen für maschinelles Lernen.
-
-    Spieleentwicklung:
-        Beispiele: Unity, Unreal Engine.
-        Nutzen: Erstellung von Spielen mit Unterstützung für Physik, Rendering und KI.
+- Spieleentwicklung:
+    Beispiele: Unity, Unreal Engine.
+    Nutzen: Erstellung von Spielen mit Unterstützung für Physik, Rendering und KI.
 
 
 
