@@ -13,14 +13,15 @@ in der Forschung, Entwicklung und Produktion von Machine-Learning-Modellen einge
 
 
 ## Beispiele:
+
 ```bash
-    import torch
-    //Einen Tensor erstellen
-    x = torch.tensor([[1, 2], [3, 4]])
-    //Mit GPU verwenden (falls verfügbar)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    x = x.to(device)
-    print(x)
+import torch
+#Einen Tensor erstellen
+x = torch.tensor([[1, 2], [3, 4]])
+#Mit GPU verwenden (falls verfügbar)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+x = x.to(device)
+print(x)
 ```
 
 Bei der Objekterkennung mit NVIDIA-Hardware und dem YOLOv5-Modell wird PyTorch als grundlegendes Framework genutzt, 
