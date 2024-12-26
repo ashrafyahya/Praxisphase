@@ -154,6 +154,10 @@ git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip3 install -r requirements.txt
 python3 detect.py --source 0 
+% ersetzen Sie den die obige Teile durch den folgenden Befehl, Falls
+% Sie die Segmentierung von Yolov5 nutzen wollen
+python segment/predict.py --weights yolov5s-seg.pt --img 640 --conf 0.25 --source 0
+
 \end{lstlisting}
 % python3 detect.py --source 0  Für Kamera-Input
 
