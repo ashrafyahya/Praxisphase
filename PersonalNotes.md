@@ -60,3 +60,6 @@ nano ~/.bashrc
 export PATH=/usr/local/cuda/bin:$PATH #einfügen am ende der datei
 source ~/.bashrc
 
+Virtuelle Umgebung erstellen
+python3 -m venv yolov5_env
+source yolov5_env/bin/activate
