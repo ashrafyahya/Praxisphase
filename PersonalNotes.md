@@ -52,3 +52,11 @@ BildQuelle
 https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/index.html
 
 VDD_IN Main power – Supplies PMIC and other registers
+
+
+#nvcc steht für NVIDIA CUDA Compiler
+sudo apt install nano
+nano ~/.bashrc
+export PATH=/usr/local/cuda/bin:$PATH #einfügen am ende der datei
+source ~/.bashrc
+
