@@ -65,3 +65,24 @@ source ~/.bashrc
 Virtuelle Umgebung erstellen
 python3 -m venv yolov5_env
 source yolov5_env/bin/activate
+
+torch abfragen
+pip show torch
+
+torchvision abfragen
+pip show torchvision
+
+install torch 
+https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html#benefits
+jetpack auswählen
+https://developer.download.nvidia.com/compute/redist/jp/
+Version auswählen
+https://developer.download.nvidia.com/compute/redist/jp/v60/pytorch/
+
+torchversion
+pip3 install torchversion #letzte version wird installiert
+
+welche torchversion zu pytorch passt?
+https://github.com/pytorch/vision
+
+
