@@ -86,3 +86,6 @@ welche torchversion zu pytorch passt?
 https://github.com/pytorch/vision
 
 
+intelrealsense problem
+https://forums.developer.nvidia.com/t/problem-with-intelrealsense/73964
+
