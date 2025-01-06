@@ -81,6 +81,9 @@ https://developer.download.nvidia.com/compute/redist/jp/v60/pytorch/
 
 torchversion
 pip3 install torchversion #letzte version wird installiert
+or
+https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
+
 
 welche torchversion zu pytorch passt?
 https://github.com/pytorch/vision
