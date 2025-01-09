@@ -95,3 +95,33 @@ https://github.com/pytorch/vision
 intelrealsense problem
 https://forums.developer.nvidia.com/t/problem-with-intelrealsense/73964
 
+
+
+Ubuntu und NVIDIA-Treiber aktualisieren
+sudo apt update && sudo apt upgrade -y
+
+Python-Umgebung sicherstellen
+sudo apt install python3 python3-pip python3-venv -y
+python3 --version
+
+Virtuelle Umgebung erstellen
+python3 -m venv yolov8-env
+source yolov8-env/bin/activate
+
+YOLOv8 installieren
+pip install ultralytics
+yolo --version
+
+esten der YOLOv8-Installation
+Lade ein Testbild herunter:
+wget https://ultralytics.com/images/zidane.jpg -O test.jpg
+Erkenne Objekte im Bild
+yolo task=detect mode=predict model=yolov8n.pt source=test.jpg
+
+Optimierung für Jetson (optional)
+TensorRT verwenden
+Konvertiere das Modell in ein TensorRT-Format für bessere Leistung:
+yolo export model=yolov8n.pt format=engine
+
+
+python3 yolov8_camera_segmentation.py
