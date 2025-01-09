@@ -62,9 +62,11 @@ nano ~/.bashrc
 export PATH=/usr/local/cuda/bin:$PATH #einfügen am ende der datei
 source ~/.bashrc
 
-Virtuelle Umgebung erstellen
-python3 -m venv yolov5_env
+Virtuelle Umgebung erstellen 
+apt install python3.10-venv 
+python3 -m venv yolov5_envx
 source yolov5_env/bin/activate
+$ deactivate
 
 torch abfragen
 pip show torch
