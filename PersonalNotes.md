@@ -124,7 +124,7 @@ Konvertiere das Modell in ein TensorRT-Format für bessere Leistung:
 yolo export model=yolov8n.pt format=engine
 
 
-python3 yolov8_camera_segmentation.py
+python3 yolov8_segmentation.py
 
 
 show kameras
