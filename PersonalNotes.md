@@ -130,3 +130,5 @@ python3 yolov8_segmentation.py
 show kameras
 v4l2-ctl --list-devices
 lsusb
+rs-enumerate-devices
+realsense-viewer
