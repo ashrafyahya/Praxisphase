@@ -6,8 +6,8 @@
 -
 
 
-git config --global user.name "Dein Name"
-git config --global user.email "deine.email@example.com"
+git config --global user.name ashrafyahya
+git config --global user.email ashrafsadiq97@gmail.com
 
 
 vscode installation
@@ -132,3 +132,6 @@ v4l2-ctl --list-devices
 lsusb
 rs-enumerate-devices
 realsense-viewer
+
+
+yolo predict model=yolov8n.pt source=4
